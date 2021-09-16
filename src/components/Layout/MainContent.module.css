@@ -1,0 +1,10 @@
+.mainbar {
+  flex: 1;
+  padding: 10rem 5rem;
+}
+
+@media only screen and (max-width: 68.75em) {
+  .mainbar {
+    padding: 3rem 3rem;
+  }
+}

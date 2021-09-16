@@ -1,0 +1,9 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+}
+@media only screen and (max-width: 68.75em) {
+  .container {
+    flex-direction: column;
+  }
+}

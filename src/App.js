@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from "./components/Layout/Layout";
+import MovieHomePage from "./pages/MovieHomePage";
+import Notification from "./components/UI/Notification";
+import { Fragment } from "react";
+import { useSelector } from "react-redux";
+import { Redirect, Route, Switch } from "react-router-dom";
+import MoviePage from "./pages/MoviePage";
+import NotFound from "./pages/NotFound";
 
 function App() {
+  const notification = useSelector((state) => state.ui.notification);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      {notification && (
+        <Notification
+          status={notification.status}
+          message={notification.message}
+          title={notification.title}
+        />
+      )}
+      <Layout>
+        <Switch>
+          <Route path='/' exact>
+            <Redirect to='/home' />
+          </Route>
+          <Route path='/home'>
+            <MovieHomePage />
+          </Route>
+          <Route path='/movies' exact>
+            <MoviePage />
+          </Route>
+          <Route path='*'>
+            <NotFound />
+          </Route>
+        </Switch>
+      </Layout>
+    </Fragment>
   );
 }
 

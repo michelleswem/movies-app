@@ -1,0 +1,42 @@
+.similiar-item {
+}
+
+.item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  z-index: 10;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.btn {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  z-index: 20;
+  font-size: 1.6rem;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 10rem;
+  border: none;
+  text-decoration: none;
+  background-color: #d9dbe9;
+  color: #14142b;
+  padding: 0.7rem 3.5rem;
+  font-size: 1.6rem;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #14142b;
+  color: #fff;
+}

@@ -1,0 +1,56 @@
+.side-content {
+  flex: 0 0 22%;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;
+  align-items: flex-start;
+  border-right: 1px solid #a0a3bd;
+}
+
+@media only screen and (max-width: 68.75em) {
+  .side-content {
+    padding: 3rem;
+    padding-bottom: 0;
+    align-items: center;
+    border-right: none;
+  }
+}
+
+.logo {
+  margin-bottom: 5rem;
+}
+
+.side-content div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.span {
+  cursor: pointer;
+  background-color: #5f2eea;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 68.75em) {
+  .side-content div {
+    display: none;
+  }
+}
+
+.textone {
+  color: #14142b;
+  margin-left: 2rem;
+}
+
+.texttwo {
+  color: #a0a3bd;
+  margin-left: 2rem;
+}
