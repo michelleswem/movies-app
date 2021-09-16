@@ -1,4 +1,4 @@
-## PREVIEW : movies-app-1.netlify.app
+## PREVIEW : https://movies-app-1.netlify.app/home
 
 # Getting Started with Create React App
 
