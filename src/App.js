@@ -3,7 +3,7 @@ import MovieHomePage from "./pages/MovieHomePage";
 import Notification from "./components/UI/Notification";
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import MoviePage from "./pages/MoviePage";
 import NotFound from "./pages/NotFound";
 
@@ -20,9 +20,6 @@ function App() {
       )}
       <Layout>
         <Switch>
-          <Route path='/' exact>
-            <Redirect to='/home' />
-          </Route>
           <Route path='/home'>
             <MovieHomePage />
           </Route>
